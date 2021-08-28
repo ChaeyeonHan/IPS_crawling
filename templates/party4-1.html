@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>반숙-국민의당-보도자료</title>
+    <style>
+        body {
+            background: #EA5504;
+            margin: 0px;
+        }
+
+        .partysum {
+            background: white;
+            position: fixed;
+            left: 0;
+            top: 7.2%;
+            width: 100%;
+            height: 7%;
+        }
+
+        .partysum a div {
+            width: 10%;
+            height: 80%;
+            margin-top: 6px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .boxparty1 {
+            background-image: url(../static/images/party1.png);
+            position: absolute;
+            left: 15%;
+        }
+
+        .boxparty2 {
+            background-image: url(../static/images/party2.png);
+            position: absolute;
+            left: 35%;
+        }
+
+        .boxparty3 {
+            background-image: url(../static/images/party3.png);
+            position: absolute;
+            left: 55%;
+        }
+
+        .boxparty4 {
+            background-image: url(../static/images/party4.png);
+            position: absolute;
+            left: 75%;
+        }
+
+        .menu {
+            background-color: black;
+            position: fixed;
+            width: 100%;
+            height: 50px;
+        }
+
+        ul,
+        ol,
+        li {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        ul.bigmenu {
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+        }
+
+        ul.bigmenu>li {
+            display: inline-block;
+            position: relative;
+            width: 15%;
+            height: 95%;
+            line-height: 47px;
+            background: #fff;
+            border: 1px solid #fff;
+            text-align: center;
+        }
+
+        ul.bigmenu>li:hover {
+            background: #eee;
+        }
+
+        ul.bigmenu>li ul.submenu {
+            display: none;
+            position: absolute;
+            width: 100%;
+            top: 58px;
+        }
+
+        ul.bigmenu>li:hover ul.submenu {
+            display: block;
+        }
+
+        ul.bigmenu>li ul.submenu>li a {
+            color: black;
+            text-decoration: none;
+            display: block;
+            position: relative;
+            width: 100%;
+            background: #fff;
+            border: 1px solid #fff;
+            text-align: center;
+            top: -10px;
+            left: -1px;
+        }
+
+        ul.bigmenu>li ul.submenu>li a:hover {
+            color: black;
+            text-decoration: underline;
+            background: #eee;
+        }
+
+        .logo {
+            position: relative;
+            left: 0%;
+        }
+
+        .logo img {
+            position: relative;
+            top: 7px;
+        }
+
+        .partymenu {
+            position: inherit;
+            left: 20%;
+            top: -10%;
+        }
+
+        .policymenu {
+            position: relative;
+            left: 30%;
+            top: -10%;
+        }
+
+        .menusum {
+            background: white;
+            width: 90%;
+            height: 7%;
+            position: absolute;
+            top: 15%;
+            left: 5%;
+        }
+
+        .menusum a {
+            position: absolute;
+            width: 25%;
+            height: 100%;
+            text-align: center;
+            line-height: 54px;
+            color: black;
+            text-decoration: none;
+        }
+
+        .menusum a:hover {
+            background-color: #ffd5be;
+        }
+
+        .menuparty1 {
+            position: absolute;
+            left: 5%;
+        }
+
+        .menuparty2 {
+            position: absolute;
+            left: 38%;
+            background-color: #8bc1ff;
+        }
+
+        .menuparty3 {
+            position: absolute;
+            left: 70%;
+        }
+
+        .content {
+            position: absolute;
+            left: 5%;
+            top: 23%;
+            width: 88%;
+            height: 80%;
+            background: white;
+            padding: 10px;
+        }
+
+        .content table {
+            position: relative;
+            top: 5%;
+            width: 80%;
+            left: 10%;
+            text-align: center;
+        }
+
+        .content table tr,
+        td {
+            padding: 10px;
+        }
+
+        .content table tr:hover {
+            background-color: #eee;
+        }
+
+        .content table tr td a {
+            color: black;
+            text-decoration: none;
+        }
+
+        .content table tr td a:hover {
+            color: black;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="partysum">
+        <a href="/party1">
+            <div class="boxparty1"> </div>
+        </a>
+        <a href="/party2">
+            <div class="boxparty2"> </div>
+        </a>
+        <a href="/party3">
+            <div class="boxparty3"> </div>
+        </a>
+        <a href="/party4">
+            <div class="boxparty4"> </div>
+        </a>
+    </div>
+
+    <div class="menusum">
+        <a href="/party4" class="menuparty1">
+            <div>정책pdf</div>
+        </a>
+        <a href="/party4/party4-1" class="menuparty2">
+            <div>논평브리핑</div>
+        </a>
+        <a href="/party4/party4-2" class="menuparty3">
+            <div>보도자료</div>
+        </a>
+    </div>
+
+    <div class="content">
+        <table>
+            <tr>
+                <th>번호</th>
+                <th>내용</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td><a href="{{list[0][1]}}">{{list[0][0]}}</a></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><a href="{{list[1][1]}}">{{list[1][0]}}</a></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><a href="{{list[2][1]}}">{{list[2][0]}}</a></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><a href="{{list[3][1]}}">{{list[3][0]}}</a></td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><a href="{{list[4][1]}}">{{list[4][0]}}</a></td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td><a href="{{list[5][1]}}">{{list[5][0]}}</a></td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td><a href="{{list[6][1]}}">{{list[6][0]}}</a></td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td><a href="{{list[7][1]}}">{{list[7][0]}}</a></td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td><a href="{{list[8][1]}}">{{list[8][0]}}</a></td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td><a href="{{list[9][1]}}">{{list[9][0]}}</a></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="menu">
+        <ul class="bigmenu">
+            <li class="logo">
+                <a href="/"><img src="{{ url_for('static', filename='images/logo.png') }}"></a>
+            </li>
+            <li class="partymenu">
+                <a href="/party1" style="color:black;  text-decoration: none;">정당별</a>
+                <ul class="submenu">
+                    <li><a href="/party1">더불어민주당</a></li>
+                    <li><a href="/party2">국민의힘</a></li>
+                    <li><a href="/party3">정의당</a></li>
+                    <li><a href="/party4">국민의당</a></li>
+                </ul>
+            </li>
+            <li class="policymenu">
+                <a href="/agendamain" style="color:black; text-decoration: none;">안건별</a>
+                <ul class="submenu">
+                    <li><a href="/buildings">도시,부동산 </a></li>
+                    <li><a href="/finance">재정,행정 </a></li>
+                    <li><a href="/economy">경제,일자리 </a></li>
+                    <li><a href="/wellbeing">의료,복지<br>성 평등</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>

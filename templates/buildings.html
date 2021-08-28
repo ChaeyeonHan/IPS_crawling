@@ -1,0 +1,211 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>정당별 도시.부동산 안건 페이지</title>
+        <meta charset="utf-8">
+        <style>
+            .text {display: flex; justify-content:center; text-transform: uppercase;opacity: 0; align-items: center; animation: fadeInText 5s 0.3s ease-out forwards;
+                   font-size: calc(5px + 2vw);}
+                    @keyframes fadeInText {100% { opacity: 1;}}
+                    @keyframes up-down {
+                    from{transform: translateY(0px);}
+                    to{transform: translateY(-20px);}
+                    }
+
+
+            body{background: black; margin: 0px;}
+             html, body {
+                height:100%;
+            }
+
+            section {
+                position:relative;
+                top:20%;
+                left:0;
+                width:100%;
+                height:100%;
+            
+            }
+
+            div {
+                position:absolute;
+                top:0;
+                left:0;
+                right:50%;
+                bottom:50%;
+                border-radius: 50px;
+                
+                background-color:red;
+            }
+
+            div:nth-of-type(2) {
+                top:0;
+                left:50%;
+                right:0;
+                bottom:50%;
+                background-color: #008CCD;
+            }
+
+            div:nth-of-type(3) {
+                top:50%;
+                left:0;
+                right:50%;
+                bottom:0;
+                background-color:#FFCF06;
+            }
+
+            div:nth-of-type(4) {
+                top:50%;
+                left:50%;
+                right:0;
+                bottom:0;
+                background-color:#DF5719;
+            }
+            h1{ color: white; text-align: center; }
+
+            h3::before{content: url("static/images/gooklogo.png");}
+            ul.small{ list-style-image: url("static/images/gooklogo.png");}
+
+            .partysum{ background: white; position: fixed; left:0; top: 7.2%; width: 100%; height: 7%; }
+            .partysum a div{ width: 10%; height: 80%; margin-top: 6px; background-repeat: no-repeat; background-size: cover; background-position: center; }
+
+            .logo{  position: relative; left: 0%; }
+            .logo img{ position: relative; top: 7px; }
+            .partymenu{ position: inherit; left: 20%; top: -10%; }
+            .policymenu{ position: relative; left: 30%; top: -10%; }
+
+            .menu{ background-color: black; position: fixed; width: 100%; height: 50px; }
+
+            ul, ol, li{list-style-type: none; margin: 0; padding: 0; color:black;}
+            ul.bigmenu{ width: 100%; height: 100%; background-color: #fff; }
+            ul.bigmenu > li{ 
+                            display:inline-block;  position: relative;  width: 15%;  height: 95%;
+                            line-height: 47px; background:#fff;  border:1px solid #fff; text-align:center;}
+            ul.bigmenu > li:hover { background:#eee; }
+            ul.bigmenu > li ul.submenu { display:none; position:absolute; width: 100%; top: 58px; }
+            ul.bigmenu > li:hover ul.submenu { display:block; }
+            ul.bigmenu > li ul.submenu > li a{ color: black; text-decoration: none; display:block; position: relative; width: 100%; background:#fff; border:1px solid #fff; text-align:center; top: -10px; left: -1px;}
+            ul.bigmenu > li ul.submenu > li a:hover { color: black; text-decoration: underline; background:#eee; }
+
+            ul.mylist1 li::before{list-style-image: url("static/images/gooklogo.png"); content:url("static/images/gooklogo.png"); font-size: 25px;}
+            ul.mylist2 li::before{list-style-image: url("static/images/thelogo.png"); content:url("static/images/thelogo.png"); font-size: 25px;}
+            ul.mylist3 li::before{list-style-image: url("static/images/jeonlogo.png"); content:url("static/images/jeonlogo.png"); font-size: 25px;}
+            ul.mylist4 li::before{list-style-image: url("static/images/kooklogo.png"); content:url("static/images/kooklogo.png"); font-size: 25px;}
+
+
+            
+     
+
+        </style>
+    </head>
+
+
+    <body>
+        <div class = "menu">
+            <ul class = "bigmenu">
+                <li class = "logo">
+                    <a href="index.html"><img src = "static/images/logo.png"></a>
+                </li>
+                <li class = "partymenu">
+                    <a href="party1.html" style="color:black;  text-decoration: none;">정당별</a>
+                    <ul class = "submenu">
+                        <li><a href = "/party1">더불어민주당</a></li>
+                        <li><a href = "/party2">국민의힘</a></li>
+                        <li><a href = "/party3">정의당</a></li>
+                        <li><a href = "/party4">국민의당</a></li>
+                    </ul>
+                </li>
+                <li class = "policymenu">
+                    <a href="/agendamain" style="color:black; text-decoration: none;">안건별</a>
+                    <ul class = "submenu">
+                        <li><a href = "/buildings">도시,부동산 </a></li>
+                        <li><a href = "/finance">재정,행정 </a></li>
+                        <li><a href = "/economy">경제,일자리 </a></li>
+                        <li><a href = "/wellbeing">의료,복지<br>성 평등</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <img src="static/images/buildingback.jpg">
+        <p style="text-align: center; color:lightgray;" class="text">〔안건〕</p>
+        <h1 class="text"> - 도시 & 부동산 - </h1>
+        <section>
+            
+            <div >
+                <img src="static/images/gook.png" width="150" style="border-top-left-radius:  50px;" >
+                 <div style="overflow-y:scroll; position:absolute; width:80%; height:65%; padding:4px; margin:8%;border:1  #000000; border-radius: 10px;background-color: wheat;" >
+                   
+                    <ul class="mylist1" >
+                        <li><a href="{{list1[0][1]}}">{{list1[0][0]}}</a></li><br>
+                        <li><a href="{{list1[1][1]}}">{{list1[1][0]}}</a></li><br>
+                        <li><a href="{{list1[2][1]}}">{{list1[2][0]}}</a></li><br>
+                        <li><a href="{{list1[3][1]}}">{{list1[3][0]}}</a></li><br>
+
+                    </ul>
+
+                    
+                
+                
+                
+                </div>
+            
+            </div>
+
+            <div>
+                <img src="static/images/the.png" width="150" style="border-top-left-radius:  50px;" >
+                 <div style="overflow-y:scroll; position:absolute; width:80%; height:65%; padding:4px; margin:8%;border:1  #000000; border-radius: 10px;background-color: wheat;" >
+                   
+                    <ul class="mylist2" >
+                        <li><a href="{{list2[0][1]}}">{{list2[0][0]}}</a></li><br>
+                        <li><a href="{{list2[1][1]}}">{{list2[1][0]}}</a></li><br>
+                        <li><a href="{{list2[2][1]}}">{{list2[2][0]}}</a></li><br>
+                        <li><a href="{{list2[3][1]}}">{{list2[3][0]}}</a></li><br>
+                    </ul>
+
+                    
+                
+                
+                
+                </div>
+            </div>
+
+            <div  >
+                <img src="images/jeong.png" width="150" style="border-top-left-radius:  50px;" >
+                 <div style="overflow-y:scroll; position:absolute; width:80%; height:65%; padding:4px; margin:8%;border:1  #000000; border-radius: 10px;background-color: wheat;" >
+                   
+                    <ul class="mylist3" >
+                        <li><a href="{{list3[0][1]}}">{{list3[0][0]}}</a></li><br>
+                        <li><a href="{{list3[1][1]}}">{{list3[1][0]}}</a></li><br>
+                        <li><a href="{{list3[2][1]}}">{{list3[2][0]}}</a></li><br>
+                        <li><a href="{{list3[3][1]}}">{{list3[3][0]}}</a></li><br>
+
+                    </ul>
+
+                    
+                
+                
+                
+                </div>
+            </div>
+            
+            
+                <div>
+                    <img src="static/images/kook.png" width="150" style="border-top-left-radius:  50px;" >
+                    <div style="overflow-y:scroll; position:absolute; width:80%; height:65%; padding:4px; margin:8%;border:1  #000000; border-radius: 10px;background-color: wheat;" >
+                      
+                       <ul class="mylist4" >
+                        <li><a href="{{list4[0][1]}}">{{list4[0][0]}}</a></li><br>
+                        <li><a href="{{list4[1][1]}}">{{list4[1][0]}}</a></li><br>
+                        <li><a href="{{list4[2][1]}}">{{list4[2][0]}}</a></li><br>
+                        <li><a href="{{list4[3][1]}}">{{list4[3][0]}}</a></li><br>
+   
+                       </ul>
+   
+                       
+                   
+                   
+                   
+                    </div>
+                </div>
+    </body>
+</html>

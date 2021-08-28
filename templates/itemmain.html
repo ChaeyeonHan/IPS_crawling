@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>안건별 메인 페이지</title>
+        <meta charset="utf-8">
+        <style>
+            
+            body{background: black; margin: 0px;}
+            
+            .partysum{
+                background: white;
+                position: fixed;
+                left:0;
+                top:7%;
+                width: 100%;
+                height: 7%;
+            }
+            .partysum a div{
+                width: 10%;
+                height: 80%;
+                margin-top: 6px;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+            }
+            .boxparty1{ 
+                background-image: url(images/party1.png);
+                position: absolute;
+                left: 15%;
+            }
+            .boxparty2{ background-image: url(images/party2.png);
+                position: absolute;
+                left: 35%;}
+            .boxparty3{ background-image: url(images/party3.png);
+                position: absolute;
+                left: 55%;}
+            .boxparty4{ background-image: url(images/party4.png);
+                position: absolute;
+                left: 75%;}
+
+            ul, ol, li{ list-style: none; margin: 0; padding: 0;}
+            
+            ul.bigmenu > li{ display:inline-block; position: relative; width: 30%; height: 100%; margin: 14px;
+                left: 20%; background:#eee; border:1px solid #eee; text-align:center;}
+            ul.bigmenu > li:hover { background:#fff; }
+            ul.bigmenu > li ul.submenu { display:none; position:absolute; width: 100%; top:30px; left:0; }
+            ul.bigmenu > li:hover ul.submenu { display:block; }
+            ul.bigmenu > li ul.submenu > li a{ display:block; position: relative; width: 100%; background:#eee; border:1px solid #eee; text-align:center; top: -10px; left: -1px;}
+            ul.bigmenu > li ul.submenu > li a:hover { background:#fff; }
+            
+            .menu{ background-color: black; position: fixed; width: 100%; height: 50px; }
+            table{margin:auto; position:relative; top:200px; border-spacing:50px;}
+
+            #outer:hover{border-style:groove; border-color:grey; border-width: thick;}
+            div{display:inline-block;  margin:0 auto; }
+            #event{ margin:auto; width:50%; text-align:center; margin-top: 0; border-spacing:50px;}
+            img{box-shadow: 5px 5px 40px rgb(148, 148, 148); }
+            .home a div{ top:0px; margin-left:0;color:black; }
+            #homeimg{position:fixed; top:0px; margin-left:0; }
+            
+
+           
+        </style>
+    </head>
+    <body>
+        <div class="home" >
+            <form method="get" action="index (1).html">
+                <input type="image" width="50" id="homebtn"src="images/home.png" alt="홈으로 돌아가기" title="HOME으로 돌아가기" id="homeimg">
+        </div> 
+        <div class = "partysum">
+            <a href = "party1.html"><div class = "boxparty1"> </div></a>
+            <a href = "party2.html"><div class = "boxparty2"> </div></a>
+            <a href = "party3.html"><div class = "boxparty3"> </div></a>
+            <a href = "party4.html"><div class = "boxparty4"> </div></a>
+        </div>
+
+        <div class = "menu">
+            <ul class = "bigmenu">
+                <li class = "partymenu">
+                    정당별
+                    <ul class = "submenu">
+                        <li><a href = "party1.html">더불어민주당</a></li>
+                        <li><a href = "party2.html">국민의힘</a></li>
+                        <li><a href = "party3.html">정의당</a></li>
+                        <li><a href = "party4.html">국민의당</a></li>
+                    </ul>
+                </li>
+                <li class = "policymenu">
+                    안건별
+                    <ul class = "submenu">
+                        <li><a href = "party1.html">A안건</a></li>
+                        <li><a href = "party1.html">B안건</a></li>
+                        <li><a href = "party1.html">C안건</a></li>
+                        <li><a href = "party1.html">D안건</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <!--------------meubar--------------------->
+        <table id="event" >
+            <tr>
+                <td><a href="economy.html"><img src="images/economy.png" width="200" alt="경제/일자리 안건" id="outer"></a></td>
+                <td><a href="buildings.html"><img src="images/building.png"width="200" alt ="도시/부동산 안건" id="outer"></a></td>
+                <td><a href="wellbeing.html"><img src="images/wellbeing2.png"width="200" alt="의료/복지/성평등 안건" id="outer"></a></td>
+                <td><a href="finance.html"><img src ="images/finance.png"width="200" alt="재정/행정/현안" id="outer"></a></td></tr>
+            
+                
+        </table>
+    </body>
+</html>

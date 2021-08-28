@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<title>안건별 메인 페이지</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" />
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</head>
+
+<body style="background-color: black;">
+
+
++
+
+
+
+<div id="wrapper_bu">
+<div id="bu1"class="img_area" ><img src="static/images/building.png"><a href="/buildings"><h4 style="text-align: center;">▲</h4></a></div>
+
+<div id="bu2"class="img_area"><img src="static/images/finance.png"><a href="/finance"><h4 style="text-align: center;">▲</h4></a></div>
+<div id="bu3"class="img_area"><img src="static/images/agenda.png"></div>
+<div id="bu4"class="img_area"><img src="static/images/economy.png"><a href="/economy"><h4 style="text-align: center;">▲</h4></a></div>
+<div id="bu5"class="img_area"><img src="static/images/wellbeing2.png"><a href="/wellbeing"><h4 style="text-align: center;">▲</h4></a></div>
+<span style='position:absolute; bottom:0px; left:49.4%;color: whitesmoke; '><h5>&nbsp;↑Click Here</h5></span>
+</div>
+
+
+
+
+<script>Conclave.auto()</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+  
+
+</script>
+
+<div class = "menu">
+    <ul class = "bigmenu">
+        <li class = "logo">
+            <a href="index.html"><img src = "static/images/logo.png"></a>
+        </li>
+        <li class = "partymenu">
+            <a href="party1.html" style="color:black;  text-decoration: none;">정당별</a>
+            <ul class = "submenu">
+                <li><a href = "/party1">더불어민주당</a></li>
+                <li><a href = "/party2">국민의힘</a></li>
+                <li><a href = "/party3">정의당</a></li>
+                <li><a href = "/party4">국민의당</a></li>
+            </ul>
+        </li>
+        <li class = "policymenu">
+            <a href="/agendamain" style="color:black; text-decoration: none;">안건별</a>
+            <ul class = "submenu">
+                <li><a href = "/buildings">도시,부동산 </a></li>
+                <li><a href = "/finance">재정,행정 </a></li>
+                <li><a href = "/economy">경제,일자리 </a></li>
+                <li><a href = "/wellbeing">의료,복지<br>성 평등</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+</body>
+
+</html>
